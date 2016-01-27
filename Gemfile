@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.4'
+ruby '2.2.1'
 
 gem 'rails', '4.2.5'
 gem 'sass-rails', '~> 5.0'
@@ -27,6 +27,11 @@ group :development do
   gem 'spring'
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
   gem "binding_of_caller"
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
 end
 
 group :production do
