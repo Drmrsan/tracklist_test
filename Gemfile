@@ -15,6 +15,7 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'devise', '~> 3.5', '>= 3.5.5'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
+gem 'sqlite3'
 
 
 group :development, :test do
@@ -22,7 +23,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'sqlite3'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
