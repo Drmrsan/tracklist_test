@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery-ui
 //= require bootstrap-sprockets
+//= require rails.validations
+//= require rails.validations.simple_form 
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
@@ -52,4 +54,6 @@ $(document).ready(function () {
 
    $('.datepicker').datepicker(
       { dateFormat: 'dd-mm-yy' });
+
+ $('#myModal').on('shown.bs.modal', function () { $(ClientSideValidations.selectors.forms).validate(); });
 })

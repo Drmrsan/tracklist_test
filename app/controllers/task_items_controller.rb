@@ -10,7 +10,7 @@ class TaskItemsController < ApplicationController
 		if @task_item.save
 			redirect_to @task_list, notice: "Task item successfully added"
 		else
-			render 'new', notice: "Something went wrong!"
+			redirect_to root_path, notice: "Please check if you fill out all fields"
 		end
 	end
 

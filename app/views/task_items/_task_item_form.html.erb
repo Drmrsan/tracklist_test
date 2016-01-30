@@ -1,0 +1,31 @@
+
+<div class="input-group">
+	<div class="input-group-addon"><b>+</b></div>
+	<input type="text" class="form-control" data-toggle="modal" data-target="#myModal" placeholder: "Add Task Item" />
+</div>
+
+	<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+	    <div class="modal-content">
+	      	<div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Create new Task Item</h4>
+	     	</div>
+		     <div class="modal-body">
+			     <%= simple_form_for ([@task_list, @task_list.task_items.build]) , {validate: true} do |f|  %>
+			        <%= f.input :title %>
+			        <%= f.input :description %>
+			        <%= f.text_field :duedate, placeholder:" Set due date...", class: "datepicker", :data => {provide: 'datepicker', required: true} %>
+		     </div>
+
+		    <div class="modal-footer">
+		        <%= f.button :submit %>
+		    </div>
+		   	<% end %>
+	    </div>
+  </div>
+</div>
+
+
+
